@@ -1,4 +1,4 @@
-package defualtpackage;
+/*// We 
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -20,11 +20,15 @@ public class Score {
 		int highScore = 0;
 		int totalScore;
 		int gamesPlayed;
+		JPanel scoreBoard;
+		JLabel labelScore,score;
 		
-		do {
-			if()
-		}
-	}
+		scoreBoard = new JPanel();
+		getContentPane().add(scoreBoard);
+		labelScore = new JLabel("Score:");
+		score = new JLabel("0");
+		scoreBoard.add(labelScore);
+		scoreBoard.add(score);
 	
 }
 
@@ -33,3 +37,4 @@ public class Score {
 
 
 
+*/
