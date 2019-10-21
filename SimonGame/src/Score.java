@@ -1,4 +1,4 @@
-package (default packages);
+package defualtpackage;
 
 import java.awt.Color;
 import java.awt.Dimension;
