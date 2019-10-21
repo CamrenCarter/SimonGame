@@ -1,6 +1,4 @@
-
-
-import java.awt.Color;
+/*import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -8,13 +6,13 @@ import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
- 
+
 public class Board extends JFrame {
 
     static ArrayList<Integer> Player = new ArrayList<Integer>();
     static ArrayList<Integer> Computer = new ArrayList<Integer>();
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         JFrame frame = new JFrame("Simon");
         int CompPick;
         Random gen = new Random();
@@ -51,49 +49,52 @@ public class Board extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 Player.add(0);
                 if (!Player.equals(Computer)) {
-                    JOptionPane.showMessageDialog(null, "You Lose");
+                	
                 }
             }
         });
-
+ 
         RedButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Player.add(1);
                 if (!Player.equals(Computer)) {
-                    JOptionPane.showMessageDialog(null, "You Lose");
+                	
                 }
             }
         });
-
+ 
         YellowButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Player.add(2);
                 if (!Player.equals(Computer)) {
-                    JOptionPane.showMessageDialog(null, "You Lose");
+                	
                 }
+
             }
         });
- 
+
         GreenButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Player.add(3);
                 if (!Player.equals(Computer)) {
-                    JOptionPane.showMessageDialog(null, "You Lose");
+                	
                 }
             }
         });
- 
+
         do {
+
             if (Player.equals(Computer)) {
                 Player.clear();
             }
-
+ 
             CompPick = gen.nextInt(4);
-            Computer.add(CompPick); 
-
+            Computer.add(CompPick);
+            
             for (int i = 0; i < Computer.size(); i++) {
-                if (Computer.get(i) == 0) {
-                	BlueButton.doClick(1000);
+                if (Computer.get(i) == 0) { //Blue Button
+                    BlueButton.doClick(1000);
+
                     try {
                         Thread.currentThread().sleep(1000);
                     } catch (InterruptedException e) {
@@ -106,18 +107,15 @@ public class Board extends JFrame {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-
-                } else if (Computer.get(i) == 2) {
-
+                } else if (Computer.get(i) == 2) {  //Yellow Button
                     YellowButton.doClick(1000);
-
                     try {
                         Thread.currentThread().sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 } else if (Computer.get(i) == 3) {
-                    GreenButton.doClick(1000);
+                    GreenButton.doClick(1000); 
                     try {
                         Thread.currentThread().sleep(1000);
                     } catch (InterruptedException e) {
@@ -125,9 +123,8 @@ public class Board extends JFrame {
                     }
                 }
             }
-            if (!Computer.equals(Player)) {
-                JOptionPane.showMessageDialog(null, "You Lose");
-            }
         } while (Computer.equals(Player));
+    	JOptionPane.showMessageDialog(null, "You Lose");
     }
 }
+*/
